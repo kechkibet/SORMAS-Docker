@@ -3,7 +3,8 @@ services:
   sormas:
     links: 
       - postgres
-    image: hzibraunschweig/sormas-application:${SORMAS_VERSION}
+    # image: hzibraunschweig/sormas-application:${SORMAS_VERSION/
+    build: sormas/
     environment:
       - SORMAS_POSTGRES_USER=${SORMAS_POSTGRES_USER}
       - SORMAS_POSTGRES_PASSWORD=${SORMAS_POSTGRES_PASSWORD}
