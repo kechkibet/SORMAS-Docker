@@ -26,6 +26,8 @@ services:
       - TZ=${TZ}
     depends_on:
       - postgres
+    volumes:
+      - /srv/dockerdata/sormas/theme/:/opt/domains/sormas/applications/sormas-ui/VAADIN/themes/
   postgres:
     restart: unless-stopped
     command: -c 'config_file=/etc/postgresql/postgresql.conf'
