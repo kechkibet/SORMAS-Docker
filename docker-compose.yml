@@ -40,6 +40,8 @@ services:
       - SORMAS_POSTGRES_PASSWORD=${SORMAS_POSTGRES_PASSWORD}
       - SORMAS_POSTGRES_USER=${SORMAS_POSTGRES_USER}
       - TZ=${TZ}
+    ports:
+      - "5432:5432"
     volumes:
       - ${SORMAS_PATH}/psqldata:/var/lib/postgresql/data
   pg_dump: 
